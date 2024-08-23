@@ -1,0 +1,22 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "name": "Python Debugger: Current File with Arguments",
+      "type": "debugpy",
+      // "env": {"PYTHONPATH": "${workspaceFolder}/whisperx"},
+      "request": "launch",
+      "cwd": "${workspaceFolder}/",
+      "program": "whisperx/transcribe.py",
+      "console": "integratedTerminal",
+      "args": ["~/Downloads/audio/out.wav","--language","zh","--model","tiny","--batch_size","1","--output_format","srt","--compute_type","int8","--max_speakers","4","--segment_resolution","chunk","--hf_token","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"],
+      // "args": [
+      //   ""
+      // ]
+    }
+  ]
+}

@@ -5,12 +5,18 @@ import warnings
 
 import numpy as np
 import torch
+import sys
+# import os
 
-from .alignment import align, load_align_model
-from .asr import load_model
-from .audio import load_audio
-from .diarize import DiarizationPipeline, assign_word_speakers
-from .utils import (LANGUAGES, TO_LANGUAGE_CODE, get_writer, optional_float,
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+print(f"SCRIPT_DIR:{SCRIPT_DIR}")
+sys.path.append(os.path.dirname(SCRIPT_DIR))
+
+from whisperx.alignment import align, load_align_model
+from whisperx.asr import load_model
+from whisperx.audio import load_audio
+from whisperx.diarize import DiarizationPipeline, assign_word_speakers
+from whisperx.utils import (LANGUAGES, TO_LANGUAGE_CODE, get_writer, optional_float,
                     optional_int, str2bool)
 
 
